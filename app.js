@@ -45,10 +45,20 @@ app.post("/createBlog", (req,res)=>{
     content: req.body.blog
   });
   newBlog.save();
+
+  res.redirect('/blog');
 });
 
-app.get("/blog", (req, res)=> {
+async function retrieve() {
+	let data = await Blog.find({});
+  console.log(data); 
+  return data;
+};
 
+app.get("/blog", async (req, res)=> {
+  let data = await retrieve();
+  console.log(data);
+	res.send(data);
 })
 
 app.listen(3000, () => {
