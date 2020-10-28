@@ -13,27 +13,42 @@
   <body>
     <div class="container1" ng-app="MyApp" ng-controller="MyCtrl">
       <header>
-        <nav>
-          <a href="index.html">
-            <img src="./logo.png" class="logo-top">
-          </a>
-        </nav>
-        <h1 class="title">Country wise Coronavirus Outbreak tracker</h1>
+        <div class="nav">
+          <input type="checkbox" id="nav-check">
+          <div class="nav-header">
+            <div class="nav-title">
+              <a href="index.html">
+                <img src="./logo.png" class="logo-top">
+              </a>
+            </div>
+          </div>
+          <div class="nav-btn">
+            <label for="nav-check">
+              <span></span>
+              <span></span>
+              <span></span>
+            </label>
+          </div>
+
+          <div class="nav-links">
+            <a href="/" target="_blank">Home</a>
+            <a href="/blog" target="_blank">Blog</a>
+            <a href="/createBlog" target="_blank">Create Blog</a>
+            <!-- <a href="https://jsfiddle.net/user/jo_Geek/" target="_blank">JsFiddle</a> -->
+          </div>
+        </div>
+
+        <h1 class="title">Coronavirus Outbreak Tracker</h1>
       </header>
 
       <div class="buttons">
         <button type="button" name="who"><a
             href="https://www.who.int/emergencies/diseases/novel-coronavirus-2019">WHO Website</a></button>
         <button type="button" name="table"> <a href="#table">Coronavirus Table</a></button>
-        <button type="button" name="hospitals"><a href="">Hospitals near me</a></button>
-        <button type="button" name="blog"><a href="">Blog</a></button>
+        <!-- <button type="button" name="hospitals"><a href="">Hospitals near me</a></button> -->
+        <button type="button" name="blog" onclick="location.href='./blog'">Blog</button>
       </div>
       
-      <div class="search-box">
-        <input type="text" name="search" placeholder="Search Country" class="search" ng-model="countryName">
-      </div>
-
-
       <div class="stats">
         <div class="confirmed">
           <h2>Worldwide Confirmed Cases</h2>
@@ -53,7 +68,13 @@
           <h1 class="number">{{all_data.Global.TotalRecovered}}</h1>
         </div>
       </div>
-      <br><br><br>
+      
+      <br>
+      <br>
+      
+      <div class="search-box">
+        <input type="text" name="search" placeholder="Search Country" class="search" ng-model="countryName">
+      </div>
       <center>
         <h2>Country-wise Tabular Data</h2>
         <div id="table">

@@ -1,11 +1,13 @@
-const URL = "https://covid19.mathdro.id/api";
-const URL1 = "https://api.covid19api.com/summary";
+const covidURL = "https://api.covid19api.com/summary";
+const blogURL = "http://localhost:3000/blogAPI";
+
 let app = angular.module("MyApp",[]);
 
 app.controller('MyCtrl',($scope , $http)=>{
     // this is controller
     $scope.countries = [];
-    $http.get(URL1).then((response)=>{
+    $http.get(covidURL)
+    .then((response)=>{
       console.log(response);
       $scope.countries = response.data.Countries;
       $scope.all_data = response.data;
@@ -13,6 +15,14 @@ app.controller('MyCtrl',($scope , $http)=>{
         console.log(error);
     })
 });
+
+app.controller('MyBlog', ($scope, $http) => {
+  $http.get(blogURL).then((response)=>{
+    console.log(response);
+    $scope.blogs = response.data;
+  })
+})
+
 
 
 
