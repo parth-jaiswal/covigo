@@ -2,12 +2,15 @@
   font-family: 'Montserrat', sans-serif;
   padding: 0;
   margin: 0;
+  
 }
 
+
 .logo-top {
-  width: 15%;
+  width: 60%;
   padding-left: 10px;
   text-align: center;
+
 }
 
 
@@ -23,10 +26,10 @@ button {
   height: 45px;
   margin: 10px;
   border-radius: 10px;
-  background-color: #5ac9e2;
+  background-color:#fff;
   border-style: solid;
-  border-color: #5ac9e2;
-  color: #00235a;
+  border-color:#fff;
+  color:#695697;
   font-weight: 800;
   cursor: pointer;
   outline: none;
@@ -40,14 +43,15 @@ a {
 
 .container1 {
   min-height: 100vh;
-  background: #ddf3f5;
-}
+  font-weight: 1000;
 
+  background:linear-gradient(90deg, #ffffff 23%, #0e43a6 78%);
+}
+/*background:linear-gradient(90deg, #4e54c8 0%,#8f94fb 100% );*/
 .mob-img {
   width: 400px;
   padding-top: 200px;
-  /* border-style:solid;
-    border-color: red; */
+  
 }
 .stats{
   margin: auto;
@@ -63,7 +67,7 @@ a {
 }
 
 .confirmed{
-    background-color:#f2aaaa;
+    background:linear-gradient(90deg, #ff0004 52%, #0d43a5 100%);
     border-radius:18px;
     margin:10px;
     text-align:center;
@@ -71,7 +75,7 @@ a {
     color: white;
 }
 .recovered{
-    background-color: #0074F7;
+    background:linear-gradient(90deg, #0ebc04 52%, #0d43a5 100%);
     margin:10px;
     text-align:center;
     border-radius:18px;
@@ -80,7 +84,7 @@ a {
 
 }
 .deaths{
-    background-color: #f2aaaa;
+    background:linear-gradient(90deg, #797777 64%, #0d43a5 100%);
     margin:10px;
     text-align:center;
     border-radius:18px;
@@ -124,11 +128,14 @@ table {
 }
 
 th, td {
+  font-size: large;
   text-align:center;
   padding:5px 0;
+  
 }
 tbody tr:nth-child(even){
-  background:#ECF0F1;
+    
+    /* background:linear-gradient(90deg, #ffffff 20%, #4d75bd 100%); */
 }
 
 .country {
@@ -136,10 +143,11 @@ tbody tr:nth-child(even){
   color: black;
   /* padding: 20px; */
   margin: 5px;
+  
   border-radius: 10px;
-  background-color: #a6dcef;
+  /* background:linear-gradient(90deg, #ffffff 20%, #4d75bd 100%); */
   text-align: center;
-}
+} 
 
 .heading {
   color: white;
@@ -152,14 +160,14 @@ tbody tr:nth-child(even){
 }
 
 body {
-  background-color:#ddf3f5;
+  background:linear-gradient(90deg, #ffffff 23%, #0e43a6 78%);
 }
 
 /* NAVBAR */
 .nav {
-  height: 50px;
+  height: 110px;
   width: 100%;
-  background-color: #2849d5;
+  background:linear-gradient(90deg, #ffffff 23%, #0e43a6 78%);
   position: relative;
 }
 
@@ -189,7 +197,7 @@ body {
   display: inline-block;
   padding: 13px 10px 13px 10px;
   text-decoration: none;
-  color: #efefef;
+  color: white;
 }
 
 .nav>.nav-links>a:hover {
@@ -230,8 +238,10 @@ body {
   .nav>.nav-links {
     position: absolute;
     display: block;
+    
     width: 100%;
-    background-color: #333;
+    /* background-color: #333; */
+    background:linear-gradient(90deg, #ffffff 23%, #0e43a6 78%);
     height: 0px;
     transition: all 0.3s ease-in;
     overflow-y: hidden;
@@ -273,7 +283,7 @@ body {
 }
 
 .blogContent {
-  ;
+  
   padding: 20px;
 }
 
