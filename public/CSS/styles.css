@@ -178,10 +178,10 @@ th, td {
   padding:5px 0;
   
 }
-tbody tr:nth-child(even){
+/* tbody tr:nth-child(even){
     
-    /* background:linear-gradient(90deg, #ffffff 20%, #4d75bd 100%); */
-}
+   background:linear-gradient(90deg, #ffffff 20%, #4d75bd 100%);
+} */
 
 .country {
   height: 50px;
@@ -349,4 +349,8 @@ body {
 }
 .notDanger {
   color: lightgreen;
+}
+
+a {
+  color: inherit;
 }
