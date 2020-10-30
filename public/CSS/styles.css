@@ -34,7 +34,7 @@ textarea{
 }
 
 button[type=button]{
-  margin: 45px 70px ;
+  margin: 35px;
   width: 0200px;
   text-align: center;
   font-size: 20px;
@@ -103,7 +103,7 @@ label{
     border-radius:18px;
     margin:10px;
     text-align:center;
-    padding:20px;
+    padding:8px;
     color: white;
     
 }
@@ -112,7 +112,7 @@ label{
     margin:10px;
     text-align:center;
     border-radius:18px;
-    padding:20px;
+     padding:8px;
     color: white;
 
 }
@@ -121,7 +121,7 @@ label{
     margin:10px;
     text-align:center;
     border-radius:18px;
-    padding:20px;
+     padding:8px;
     color: white;
 }
 .number {
@@ -316,21 +316,22 @@ body {
   width: auto;
   margin: 2% 10% 2% 10%;
   border: 0;
-  background-color: #5ac9e2;
+  
   border-radius: 10px;
   border-collapse: collapse;
   display: block;
+  background:linear-gradient(90deg, #c9d6ff 0%, #e2e2e2 100%);
 }
 
 .blogAuthor{
-  background-color: #0074F7;
+  background:linear-gradient(90deg, #6184c4 0%, #e0e1e3 100%);
   padding: 20px;
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
 }
 
 .blogContent {
-  
+  font-size: 25px;
   padding: 20px;
 }
 
