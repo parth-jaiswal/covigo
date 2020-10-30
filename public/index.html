@@ -8,6 +8,7 @@
     <title>COVIGO</title>
     <link rel="stylesheet" href="./CSS/styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
+
   </head>
 
   <body>
@@ -95,9 +96,9 @@
             </tr>
             <tr class="country" ng-repeat="country in countries | filter:countryName">
               <td>{{country.Country}}</td>
-              <td>{{country.TotalConfirmed}}</td>
-              <td>{{country.TotalDeaths}}</td>
-              <td>{{country.TotalRecovered}}</td>
+              <td>{{country.TotalConfirmed}}  <span class = 'danger'>(+{{country.NewConfirmed}})</span> </td>
+              <td>{{country.TotalDeaths}} <span class = 'danger'>(+{{country.NewDeaths}})</span> </td>
+              <td>{{country.TotalRecovered}} <span class = 'notDanger'>(+{{country.NewRecovered}})</span> </td>
             </tr>
           </table>
         </div>
@@ -105,6 +106,7 @@
     </div>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.0/angular.min.js"></script>
     <script src="./JS/script.js"></script>
+    <script src="./JS/animationScript.js"></script>
   </body>
 
   </html>

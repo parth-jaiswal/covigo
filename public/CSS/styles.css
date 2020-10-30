@@ -34,7 +34,7 @@ textarea{
 }
 
 button[type=button]{
-  margin: 70px;
+  margin: 45px 70px ;
   width: 0200px;
   text-align: center;
   font-size: 20px;
@@ -47,6 +47,8 @@ button[type=button]{
   font-weight: 800;
   cursor: pointer;
   outline: none;
+  padding: 15px;
+  
 }
 
 a {
@@ -332,3 +334,18 @@ body {
   padding: 20px;
 }
 
+.blogAuthorName{
+  text-align: left;
+}
+
+.blogDate{
+  text-align: right;
+  float: right;
+}
+
+.danger {
+  color: #c20505 ;
+}
+.notDanger {
+  color: lightgreen;
+}

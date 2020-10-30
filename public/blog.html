@@ -36,7 +36,7 @@
   <div id="blogs" ng-controller='MyBlog' ng-app="MyApp">
     <div class="blogs" ng-repeat="blog in blogs"> 
       
-      <h4 class="blogAuthor">{{blog.name}} - {{blog.date}}</h4> 
+      <h4 class="blogAuthor"><span class="blogAuthorName">{{blog.name}}</span> <span class = "blogDate">{{blog.date}}</span></h4>
       <p class="blogContent">{{blog.content}}</p>
 
       
