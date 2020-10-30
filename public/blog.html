@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./CSS/styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
+  <title>Document</title>
+</head>
+<body>
+  <div class="nav">
+    <input type="checkbox" id="nav-check">
+    <div class="nav-header">
+      <div class="nav-title">
+        <a href="index.html">
+          <img src="./logo.gif" class="logo-top">
+        </a>
+      </div>
+    </div>
+    <div class="nav-btn">
+      <label for="nav-check">
+        <span></span>
+        <span></span>
+        <span></span>
+      </label>
+    </div>
+
+    <div class="nav-links">
+      <a href="/" target="_blank">Home</a>
+      <a href="/blog" target="_blank">Blog</a>
+      <a href="/createBlog" target="_blank">Create Blog</a>
+      <!-- <a href="https://jsfiddle.net/user/jo_Geek/" target="_blank">JsFiddle</a> -->
+    </div>
+  </div>
+
+  <div id="blogs" ng-controller='MyBlog' ng-app="MyApp">
+    <div class="blogs" ng-repeat="blog in blogs"> 
+      
+      <h4 class="blogAuthor"><span class="blogAuthorName">{{blog.name}}</span> <span class = "blogDate">{{blog.date.slice(0,10)}}</span></h4>
+      <p class="blogContent">{{blog.content}}</p>
+
+      
+      <br>
+    </div>
+  </div>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.0/angular.min.js"></script>
+  <script src="./JS/script.js"></script>
+</body>
+</html>

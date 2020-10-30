@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+
+<body lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>COVIGO</title>
+    <link rel="stylesheet" href="./CSS/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
+
+  </head>
+
+  <body>
+    <div class="container1" ng-app="MyApp" ng-controller="MyCtrl">
+      <header>
+        <div class="nav">
+          <input type="checkbox" id="nav-check">
+          <div class="nav-header">
+            <div class="nav-title">
+              <a href="index.html">
+                <img src="./logo.gif" class="logo-top">
+              </a>
+            </div>
+          </div>
+          <div class="nav-btn">
+            <label for="nav-check">
+              <span></span>
+              <span></span>
+              <span></span>
+            </label>
+          </div>
+
+          <div class="nav-links">
+            <a href="/" target="_blank">Home</a>
+            <a href="/blog" target="_blank">Blog</a>
+            <a href="/createBlog" target="_blank">Create Blog</a>
+            <!-- <a href="https://jsfiddle.net/user/jo_Geek/" target="_blank">JsFiddle</a> -->
+          </div>
+        </div>
+
+        <h1 class="title">Coronavirus Outbreak Tracker</h1>
+      </header>
+
+      <div class="buttons">
+        <button type="button" name="who"><a
+            href="https://www.who.int/emergencies/diseases/novel-coronavirus-2019">WHO Website</a></button>
+        <button type="button" name="table"> <a href="#table">Coronavirus Table</a></button>
+        <!-- <button type="button" name="hospitals"><a href="">Hospitals near me</a></button> -->
+        <button type="button" name="blog" onclick="location.href='./blog'">Blog</button>
+      </div>
+      
+      <div class="stats">
+        <div class="confirmed">
+          <h2>Worldwide Confirmed Cases</h2>
+          <br />
+          <h1 class="number">{{all_data.Global.TotalConfirmed}}</h1>
+        </div>
+
+        <div class="deaths">
+          <h2>Worldwide Total Deaths</h2>
+          <br />
+          <h1 class="number">{{all_data.Global.TotalDeaths}}</h1>
+        </div>
+
+        <div class="recovered">
+          <h2>Worldwide Total Recovered</h2>
+          <br />
+          <h1 class="number">{{all_data.Global.TotalRecovered}}</h1>
+        </div>
+      </div>
+      
+      <br>
+      <br>
+      
+      <div class="search-box">
+        <input type="text" name="search" placeholder="Search Country" class="search" ng-model="countryName">
+      </div>
+      <center>
+        <h2>Country-wise Tabular Data</h2>
+        <div id="table">
+          <table>
+            <tr class="heading">
+              <th>
+                <h3>Country</h3>
+              </th>
+              <th>
+                <h3>Total Confirmed Cases</h3>
+              </th>
+              <th>
+                <h3>Total Deaths</h3>
+              </th>
+              <th>
+                <h3>Total Recovered Patients</h3>
+              </th>
+            </tr>
+            <tr class="country" ng-repeat="country in countries | filter:countryName">
+              <td>{{country.Country}}</td>
+              <td>{{country.TotalConfirmed}}  <span class = 'danger'>(+{{country.NewConfirmed}})</span> </td>
+              <td>{{country.TotalDeaths}} <span class = 'danger'>(+{{country.NewDeaths}})</span> </td>
+              <td>{{country.TotalRecovered}} <span class = 'notDanger'>(+{{country.NewRecovered}})</span> </td>
+            </tr>
+          </table>
+        </div>
+      </center>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.0/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="./JS/script.js"></script>
+    <script src="./JS/animationScript.js"></script>
+  </body>
+
+  </html>
