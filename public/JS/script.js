@@ -1,5 +1,5 @@
 const covidURL = "https://api.covid19api.com/summary";
-const blogURL = "http://localhost:3000/blogAPI";
+const blogURL = "./blogAPI";
 
 let app = angular.module("MyApp",[]);
 

@@ -1,18 +1,25 @@
 const express = require('express');
 const mongoose  = require ('mongoose');
-
 const bodyParser  = require ('body-parser');
 const path  = require ('path');
 const app = express();
 
+const port = process.env.PORT || 3000
+
 app.use(bodyParser.json())
-app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.urlencoded({ extended: true }));
 
 app.use(express.static(__dirname+"/public"));
 
-mongoose.connect("mongodb://localhost:27017/webtechDB",{ useNewUrlParser: true , useUnifiedTopology: true }, ()=>{
-  console.log('Connected to Mongodb');
-});
+mongoose
+	.connect(
+		"mongodb+srv://Parth:Fns6Af04pEmPkk7m@cluster0.xwglb.mongodb.net/webtechDB?retryWrites=true&w=majority",
+		{ useNewUrlParser: true, useUnifiedTopology: true }
+	)
+	.then(() => {
+		console.log("Connected to Mongodb");
+	})
+	.catch((err) => console.log(err));
 
 const blogSchema = new mongoose.Schema({
 	name: { type: String, required: true },
@@ -77,6 +84,6 @@ app.get("/blogAPI", (req, res) => {
 
 
 
-app.listen(3000, () => {
+app.listen(port, () => {
   console.log("Server started at port 3000");
 });
