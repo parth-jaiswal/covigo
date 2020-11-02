@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Covid Story</title>
+  <link rel="stylesheet" href="./CSS/styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="nav">
+    <input type="checkbox" id="nav-check">
+    <div class="nav-header">
+      <div class="nav-title">
+        <a href="index.html">
+          <img src="./logo.gif" class="logo-top">
+        </a>
+      </div>
+    </div>
+    <div class="nav-btn">
+      <label for="nav-check">
+        <span></span>
+        <span></span>
+        <span></span>
+      </label>
+    </div>
+
+    <div class="nav-links">
+      <a href="/" target="_blank">Home</a>
+      <a href="/blog" target="_blank">Blog</a>
+      <a href="/createBlog" target="_blank">Create Blog</a>
+      <!-- <a href="https://jsfiddle.net/user/jo_Geek/" target="_blank">JsFiddle</a> -->
+    </div>
+  </div>
+
+  <h1>Share your Covid 19 experience</h1>
+  
+  <form action="/createBlog" method="post">
+    <input type="text" name="name" id="name" placeholder="Name" required><br><br>
+    <input type="text" name="email" id="email" placeholder="Email" required onblur="ValidateEmail()"><br><br>
+    <textarea name="blog" id="blog" cols="30" rows="10" placeholder="Your Story" onfocus="wordFilter()"></textarea><br>
+    <button id="submit" type="submit">Submit</button>
+  </form>
+
+  <script>
+    document.getElementById("submit").addEventListener("mouseover", function () {
+    document.getElementById("submit").style.backgroundColor = "#00235a";
+    document.getElementById("submit").style.color = "white";
+    });
+
+    document.getElementById("submit").addEventListener("mouseout", function () {
+    document.getElementById("submit").style.backgroundColor = "white";
+    document.getElementById("submit").style.color = "#00235a";
+    });
+    function ValidateEmail() {
+      var regex = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+      if(regex.test(document.getElementById("email").value) === true) {
+        console.log('match');
+      } else {
+        alert("You have entered an invalid email address!");
+        return false;
+      }
+    }
+
+  </script>
+</body>
+</html>
