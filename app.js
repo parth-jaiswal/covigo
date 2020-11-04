@@ -82,7 +82,9 @@ app.get("/blogAPI", (req, res) => {
   })
 })
 
-
+app.get('/stateWise', (req, res)=>{
+  res.sendFile(__dirname+'/public/stateWise.html')
+});
 
 app.listen(port, () => {
   console.log("Server started at port 3000");
