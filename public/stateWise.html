@@ -5,6 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>District Wise</title>
   <link rel="stylesheet" href="./CSS/styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
+
 </head>
 
 
@@ -42,9 +44,9 @@
       
       <div class="states" ng-repeat="state in statewise | filter: stateName" style = "border: 1px solid blue;">
         <div class = "stateBox">
-          <h4 class="">{{state.state}}</h4>
+          <h4 class="statename">{{state.state}}</h4>
           <div>
-            <span style = "color:">Active:  {{state.active}} </span><br>
+            <span>Active:  {{state.active}} </span><br>
             <span style = "color:red">Confirmed: {{state.confirmed}} </span><br>
             <span style = "color: grey">Deaths: {{state.deaths}}</span> <br>
             <span style = "color: green">Recovered: {{state.recovered}} </span><br>
